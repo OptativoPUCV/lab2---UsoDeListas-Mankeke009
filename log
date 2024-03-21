@@ -2,3 +2,17 @@ Thu 21 Mar 2024 08:19:48 PM UTC:
  tests:  0|5
 total_score: 0/70
 945799f
+Thu 21 Mar 2024 08:33:56 PM UTC: 
+ exercises.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:49:14: error: implicit declaration of function ‘last’ [-Werror=implicit-function-declaration]
+   49 |       *(int*)last(L) = i;
+      |              ^~~~
+exercises.c:49:8: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   49 |       *(int*)last(L) = i;
+      |        ^
+cc1: all warnings being treated as errors
+Compilation failed
+87407bc
