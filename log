@@ -91,3 +91,9 @@ exercises.c:169:1: error: expected identifier or ‘(’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 32a613c
+Sat 23 Mar 2024 07:52:39 PM UTC: 
+ exercises.c | 68 ++++++++-----------------------------------------------------
+ 1 file changed, 8 insertions(+), 60 deletions(-)
+ tests:  4|2
+total_score: 40/70
+824926d
