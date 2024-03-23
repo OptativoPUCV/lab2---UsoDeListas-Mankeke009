@@ -255,3 +255,20 @@ Sat 23 Mar 2024 10:54:44 PM UTC:
  tests:  9|0
 total_score: 70/70
 86f3284
+Sat 23 Mar 2024 10:55:39 PM UTC: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:99:17: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   99 |       *elemento = top(P1);
+      |                 ^
+exercises.c:104:17: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  104 |       *elemento = top(PilaAux);
+      |                 ^
+exercises.c:99:17: error: ‘elemento’ may be used uninitialized [-Werror=maybe-uninitialized]
+   99 |       *elemento = top(P1);
+      |       ~~~~~~~~~~^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d61cd43
