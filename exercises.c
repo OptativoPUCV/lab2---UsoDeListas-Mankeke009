@@ -142,6 +142,29 @@ int parentesisBalanceados(char *cadena) {
             }
          }
       }
+     if(cadena[i] == '{'){
+        push(Pila, &cadena[i]);
+
+     }
+     else{
+        if(cadena[i] == '}'){
+           if(top(Pila) == NULL){
+              return 0;
+           }
+        }
+     }
+     if(cadena[i] == '['){
+        push(Pila, &cadena[i]);
+
+     }
+     else{
+        if(cadena[i] == ']'){
+           if(top(Pila) == NULL){
+              return 0;
+           }
+        }
+     }
+     
      
    }
    return 1;
