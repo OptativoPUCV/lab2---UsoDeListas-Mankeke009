@@ -151,6 +151,9 @@ int parentesisBalanceados(char *cadena) {
        }
      }
    }
- return 1;
+  if(get_size(Pila) == 0){
+    return 1;
+  }
+  return 0;
 }
 
