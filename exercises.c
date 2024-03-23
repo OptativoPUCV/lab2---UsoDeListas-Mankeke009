@@ -148,12 +148,17 @@ int parentesisBalanceados(char *cadena) {
          else{
            return 0;
          }
+         
        }
+       
      }
+     
    }
-  if(get_size(Pila) == 0){
-    return 1;
-  }
-  return 0;
+   if(get_size(Pila) == 0){
+     return 1;
+   }
+   else{
+     return 0;
+   }
 }
 
