@@ -109,3 +109,60 @@ Sat 23 Mar 2024 07:54:26 PM UTC:
  tests:  5|1
 total_score: 50/70
 16cc8cf
+Sat 23 Mar 2024 08:08:39 PM UTC: 
+ exercises.c | 19 ++++++++++---------
+ 1 file changed, 10 insertions(+), 9 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:97:18: error: comparison between pointer and integer [-Werror]
+   97 |    while(top(P1) != -1){
+      |                  ^~
+exercises.c:98:21: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   98 |      int elemento = top(P1);
+      |                     ^~~
+exercises.c:99:20: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+   99 |      push(PilaAux, elemento);
+      |                    ^~~~~~~~
+      |                    |
+      |                    int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:102:23: error: comparison between pointer and integer [-Werror]
+  102 |    while(top(PilaAux) != -1){
+      |                       ^~
+exercises.c:103:21: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  103 |      int elemento = top(PilaAux);
+      |                     ^~~
+exercises.c:104:15: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  104 |      push(P1, elemento);
+      |               ^~~~~~~~
+      |               |
+      |               int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:105:15: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  105 |      push(P2, elemento);
+      |               ^~~~~~~~
+      |               |
+      |               int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:120:1: error: control reaches end of non-void function [-Werror=return-type]
+  120 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+8902246
