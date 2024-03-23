@@ -88,7 +88,7 @@ void eliminaElementos(List*L, int elem){
 /*
 Ejercicio 4.
 La función copia los punteros de la pila P1 en la pila P2.
-El orden de ambas pilas se debe mantener.la pila 1 no debe vaciarse
+El orden de ambas pilas se debe mantener.
 Puedes usar una pila auxiliar.
 */
 
