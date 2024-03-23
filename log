@@ -40,3 +40,54 @@ Thu 21 Mar 2024 08:48:35 PM UTC:
  tests:  3|2
 total_score: 40/70
 ae4260a
+Sat 23 Mar 2024 07:50:46 PM UTC: 
+ exercises.c | 62 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 62 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:96:11: error: unused variable ‘P3’ [-Werror=unused-variable]
+   96 |    Stack* P3 = create_stack();
+      |           ^~
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:113:26: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  113 |         push(pila, cadena[i]);
+      |                    ~~~~~~^~~
+      |                          |
+      |                          char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:117:15: error: implicit declaration of function ‘isEmpty’ [-Werror=implicit-function-declaration]
+  117 |           if (isEmpty(pila)){
+      |               ^~~~~~~
+exercises.c:120:18: error: expected ‘(’ before ‘{’ token
+  120 |           else if{
+      |                  ^
+      |                  (
+exercises.c:122:21: error: comparison between pointer and integer [-Werror]
+  122 |             if (top != '('){
+      |                     ^~
+exercises.c:133:18: error: expected ‘(’ before ‘{’ token
+  133 |           else if{
+      |                  ^
+      |                  (
+exercises.c:135:21: error: comparison between pointer and integer [-Werror]
+  135 |             if (top != '}'){
+      |                     ^~
+exercises.c:146:18: error: expected ‘(’ before ‘{’ token
+  146 |           else if{
+      |                  ^
+      |                  (
+exercises.c:148:21: error: comparison between pointer and integer [-Werror]
+  148 |             if (top != ']'){
+      |                     ^~
+exercises.c: At top level:
+exercises.c:169:1: error: expected identifier or ‘(’ before ‘}’ token
+  169 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+32a613c

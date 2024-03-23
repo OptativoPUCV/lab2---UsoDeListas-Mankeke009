@@ -93,6 +93,9 @@ Puedes usar una pila auxiliar.
 */
 
 void copia_pila(Stack* P1, Stack* P2) {
+   Stack* P3 = create_stack();
+  
+  
 }
 
 /*
@@ -103,6 +106,65 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   return 0;
+    Stack* pila = create_stack();
+    int i = 0;
+    while (cadena[i] != '\0'){
+      if (cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{'){
+        push(pila, cadena[i]);
+      }
+      else{
+        if (cadena[i] == ')'){
+          if (isEmpty(pila)){
+            return 0;
+          }
+          else if{
+            char top = pop(pila);
+            if (top != '('){
+              return 0;
+            }
+
+          }
+
+        }
+        else if (cadena[i] == '}'){
+          if (isEmpty(pila)){
+            return 0;
+          }
+          else if{
+            char top = pop(pila);
+            if (top != '}'){
+              return 0;
+            }
+
+          }
+
+        }
+        else if (cadena[i] == ']'){
+          if (isEmpty(pila)){
+            return 0;
+          }
+          else if{
+            char top = pop(pila);
+            if (top != ']'){
+              return 0;
+            }
+
+          }
+
+        }
+
+      }
+
+      i++;
+
+    }
+    if (isEmpty(pila)){
+      return 1;
+    }
+    else{
+      return 0;
+    }
+
+  }
 }
 
