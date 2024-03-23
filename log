@@ -272,3 +272,9 @@ exercises.c:99:17: error: ‘elemento’ may be used uninitialized [-Werror=mayb
 cc1: all warnings being treated as errors
 Compilation failed
 d61cd43
+Sat 23 Mar 2024 10:55:52 PM UTC: 
+ exercises.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+ tests:  9|0
+total_score: 70/70
+c12f223
